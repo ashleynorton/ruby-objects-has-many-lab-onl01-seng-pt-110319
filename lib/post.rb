@@ -13,7 +13,11 @@ class Post
   end 
   
   def author_name
-    self.author.name 
+    if @author == nil 
+      return nil 
+    else 
+      self.author.name 
+    end 
   end 
   
   def self.post_count
