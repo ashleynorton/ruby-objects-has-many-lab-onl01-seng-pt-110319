@@ -9,14 +9,12 @@ class Artist
   end 
   
   def songs
-    Song.all.select { |song| 
-      song.artist == self
-    }
+    @songs 
   end 
   
   def add_song(song)
     song.artist = self 
-    @songs << song
+    self.songs << song
     @@song_count += 1 
   end 
   
